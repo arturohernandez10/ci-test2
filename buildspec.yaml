@@ -4,7 +4,10 @@ phases:
   install:
     commands:
       - echo Building app...
-      - git describe --always --tags
+      - env
+      - printenv
+      - echo $CODEBUILD_SOURCE_VERSION
+      - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
