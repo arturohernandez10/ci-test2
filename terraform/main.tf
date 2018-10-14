@@ -15,6 +15,7 @@ module "single-page-application" {
   source  = "li0nel/single-page-application/aws"
   version = "0.0.7"
 
+  owner       = "${var.owner}"
   stack_name  = "${var.stack_name}"
   aws_profile = "${var.aws_profile}"
   aws_region  = "${var.aws_region}"

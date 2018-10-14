@@ -1,3 +1,7 @@
+variable "owner" {
+  type = "string"
+}
+
 variable "stack_name" {
   type = "string"
 }
