@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - echo Building app...
+      - git describe --always --tags
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
