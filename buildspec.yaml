@@ -19,7 +19,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - aws s3 cp --recursive build/ s3://$BUCKET_NAME/ --acl=public-read
+      - aws s3 cp --recursive build/ s3://$BUCKET_NAME/$CODEBUILD_RESOLVED_SOURCE_VERSION/ --acl=public-read
 artifacts:
   files:
     - build/*
